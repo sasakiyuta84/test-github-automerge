@@ -32,3 +32,5 @@ jobs:
           git commit -m "test commit by ci.yaml"
           git push
         if: steps.diff.outcome == 'failure'
+      - run: echo "aa" | grep "bb"
+        if: steps.diff.outcome == 'failure'
