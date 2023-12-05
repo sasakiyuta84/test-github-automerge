@@ -15,4 +15,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - run: sleep 30
-      - run: git commit -m "test commit by ci.yaml" --allow-empty
+      - run: |
+          git config --local user.name "actions@github.com"
+          git config --local user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "test commit by ci.yaml" --allow-empty
