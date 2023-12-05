@@ -1,0 +1,12 @@
+name: ci
+
+on:
+  pull_request:
+    branches: [main]
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+      - run: sleep 30
+      - run: git commit -m "test commit by ci.yaml" --allow-empty
